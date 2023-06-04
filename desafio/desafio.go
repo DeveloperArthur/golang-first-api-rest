@@ -11,6 +11,11 @@ import (
 )
 
 func main() {
+	/*clientes é um slice literal
+
+	Um slice literal em Go é uma forma de criar uma fatia
+	diretamente sem fazer referência a uma lista subjacente.
+	Ele permite especificar os elementos da fatia entre chaves {}.*/
 	var clientes = []models.Cliente{
 		{"12345", "Sofia", 20.0},
 		{"54321", "Sami", 40.0},
@@ -26,6 +31,9 @@ func main() {
 func unificaLista(clientes *[]models.Cliente) {
 	listaUnificada := make(map[string]models.Cliente)
 
+	/* "clientes" é um slice, pois é uma estrutura
+	de dados que contém uma referência a uma lista subjacente*/
+
 	for _, cliente := range *clientes {
 		chave := strings.ToLower(cliente.Rg) + strings.ToLower(cliente.Nome)
 		valorExistente, possuiChave := listaUnificada[chave]
@@ -39,12 +47,12 @@ func unificaLista(clientes *[]models.Cliente) {
 		}
 	}
 
-	//estamos atribuindo uma lista vazia a variavel clientes
+	//estamos atribuindo um slice vazio (uma lista vazia) a variavel clientes
 	//pois estamos substituindo o valor que o ponteiro "clientes" guarda
 	//*clientes faz a desreferencia e acessa o valor q esta no endereço de memoria
 	*clientes = []models.Cliente{}
 
-	//cada item da listaUnificada é adicionado na lista de clientes
+	//cada item da listaUnificada é adicionado no slice de clientes
 	for _, cliente := range listaUnificada {
 		*clientes = append(*clientes, cliente)
 	}
