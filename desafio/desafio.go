@@ -12,7 +12,6 @@ import (
 
 func main() {
 	/*clientes é um slice literal
-
 	Um slice literal em Go é uma forma de criar uma fatia
 	diretamente sem fazer referência a uma lista subjacente.
 	Ele permite especificar os elementos da fatia entre chaves {}.*/
