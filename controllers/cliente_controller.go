@@ -8,7 +8,6 @@ import (
 )
 
 func UnificaListaDeClientes(c *gin.Context) {
-	//clientes := models.ExemploDeEntradaParaClientes
 	var clientes []models.Cliente
 
 	error := c.ShouldBindJSON(&clientes)
