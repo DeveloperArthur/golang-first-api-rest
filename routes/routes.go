@@ -16,5 +16,6 @@ func HandleRequests() {
 	r.GET("/alunos/cpf/:cpf", controllers.BuscaAlunoPorCpf)
 	//Path Param :nome
 	r.GET("/:nome", controllers.Saldacao)
+	r.GET("/busca-cep", controllers.BuscaCep)
 	r.Run(":5000") //listen and serve on localhost:5000
 }
