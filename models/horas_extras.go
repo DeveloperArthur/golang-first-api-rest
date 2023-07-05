@@ -1,5 +1,7 @@
 package models
 
-type FolhaPagamento struct {
-	//idFuncionario, horasExtras, taxaHorasExtras
+type HorasExtras struct {
+	IdFuncinario    int
+	HorasExtras     int
+	TaxaHorasExtras float32
 }
