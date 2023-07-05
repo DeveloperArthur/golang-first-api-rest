@@ -17,5 +17,6 @@ func HandleRequests() {
 	//Path Param :nome
 	r.GET("/:nome", controllers.Saldacao)
 	r.GET("/busca-cep", controllers.BuscaCep)
+	r.GET("/folhadepagamento/funcionario/:idFuncionario", controllers.CalculaFolhaDePagamento)
 	r.Run(":5000") //listen and serve on localhost:5000
 }
