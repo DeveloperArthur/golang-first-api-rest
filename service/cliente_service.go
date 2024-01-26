@@ -11,7 +11,7 @@ func UnificaListaDeClientes(clientes *[]models.Cliente) {
 
 	/* "clientes" é um slice, pois é uma estrutura
 	de dados que contém uma referência a uma lista subjacente*/
-	//https://rust-br.github.io/rust-book-pt-br/img/trpl04-06.svg
+	//conceito igual do rust
 
 	for _, cliente := range *clientes {
 		chave := strings.ToLower(cliente.Rg) + strings.ToLower(cliente.Nome)
