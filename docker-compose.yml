@@ -20,3 +20,11 @@ services:
       - "54321:80"
     depends_on:
       - postgres
+
+# Para configurar o banco de dados acesse http://localhost:54321/browser/
+# faça login com as credenciais que estão no `docker-compose` e crie um server com nome "alunos"
+# Na aba de connections preencha:
+# - maintenance database, username e password com o valor "root"
+# - port tem o valor "5432"
+# - para preencher host você precisa executar `docker-compose exec postgres sh` pra entrar no container
+#   e executar `hostname -i` para pegar o host e preencha o campo de host
